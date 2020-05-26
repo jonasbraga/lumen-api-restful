@@ -13,6 +13,18 @@
 |
 */
 
+/**
+ * Controller name must be singular, as model does.
+ */
+
+$router->group(['prefix' => 'api/cars'], function () use ($router) {
+    $router->get('/', "CarController@getAll");
+    $router->get('/{id}', "CarController@get");
+    $router->post('/', "CarController@store");
+    $router->put('/{id}', "CarController@update");
+    $router->delete('/{id}', "CarController@destroy");
+});
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
