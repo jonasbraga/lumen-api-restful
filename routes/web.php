@@ -14,7 +14,7 @@
 */
 
 /**
- * Controller name must be singular, as model does.
+ * Controllers name must be singular, as model does.
  */
 
 $router->group(['prefix' => 'api/cars'], function () use ($router) {
